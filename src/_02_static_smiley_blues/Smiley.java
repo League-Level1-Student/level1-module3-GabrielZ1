@@ -12,18 +12,18 @@ public class Smiley extends JLabel {
 	public static final String GREEN = "green";
 	public static final String BLUE = "blue";
 	public static String color = BLUE;
-	
+
 	Smiley(){
-		super(loadIcon("_01_static_smiley_blues/smiley_"+ color +".jpg"));
+		super(loadIcon("_02_static_smiley_blues/smiley_"+ color +".jpg"));
 	}
-	
+
 	private static Icon loadIcon(String fileName) {
 		URL imageURL = Smiley.class.getClassLoader().getResource(fileName);
 		Icon icon = new ImageIcon(imageURL);
 		return icon;
 	}
-	
-	public static void setColor(String newColor) {
+
+	public static void setColor(String newColor) { //this method is called in SmileyBlues.java line 22 and changes the color of the smileys that are later created in lines 25-27 of SmileyBlues.java (using line 16 in this class (Smiley.java))
 		color = newColor;
 	}
 }

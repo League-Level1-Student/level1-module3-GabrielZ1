@@ -5,25 +5,25 @@ import java.awt.Graphics;
 import java.util.Random;
 
 public class Circle {
-    int x, y;
+	int x, y;
 
-    /*
-     * Add/remove the word "static" at the beginning of these variables
-     */
-    int radius;
-    Color color;
+	/*
+	 * Add/remove the word "static" at the beginning of these variables
+	 */
+	int radius;
+	Color color;
 
-    public Circle(int r, Color c) {
-        radius = r;
-        color = c;
+	public Circle(int r, Color c) {
+		radius = r;
+		color = c;
 
-        Random rand = new Random();
-        x = rand.nextInt(Canvas.WIDTH / 2);
-        y = rand.nextInt(Canvas.HEIGHT / 2);
-    }
+		Random rand = new Random();
+		x = rand.nextInt(Canvas.WIDTH / 2);
+		y = rand.nextInt(Canvas.HEIGHT / 2);
+	}
 
-    void draw(Graphics g) {
-        g.setColor(color);
-        g.fillOval(x, y, 2 * radius, 2 * radius);
-    }
+	void draw(Graphics g) {
+		g.setColor(color);
+		g.fillOval(x, y, 2 * radius, 2 * radius);
+	}
 }
