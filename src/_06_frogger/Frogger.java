@@ -147,7 +147,7 @@ public class Frogger extends PApplet {
 
 
 		boolean intersects(Car car) {
-			if ((frogY > car.getY() && frogY < car.getY()+50) &&
+			if ((frogY > car.getY() && frogY < car.getY()+size) &&
 					(frogX > car.getX() && frogX < car.getX()+car.getSize())) {
 				return true;
 			}

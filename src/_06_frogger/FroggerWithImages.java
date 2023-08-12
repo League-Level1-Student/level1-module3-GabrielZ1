@@ -66,18 +66,18 @@ public class FroggerWithImages extends PApplet {
 
 
 
-//		if(car1.intersects(car1)) {
-//			frogX = WIDTH/2-size;
-//			frogY = HEIGHT-size;
-//		}
-//		if(car2.intersects(car2)) {
-//			frogX = WIDTH/2-size;
-//			frogY = HEIGHT-size;
-//		}
-//		if(car3.intersects(car3)) {
-//			frogX = WIDTH/2-size;
-//			frogY = HEIGHT-size;
-//		}
+		if(car1.intersects(car1)) {
+			frogX = WIDTH/2-size;
+			frogY = HEIGHT-size;
+		}
+		if(car2.intersects(car2)) {
+			frogX = WIDTH/2-size;
+			frogY = HEIGHT-size;
+		}
+		if(car3.intersects(car3)) {
+			frogX = WIDTH/2-size;
+			frogY = HEIGHT-size;
+		}
 
 
 
@@ -112,7 +112,7 @@ public class FroggerWithImages extends PApplet {
 	public class Car {
 		int carX;
 		int carY;
-		int carSize;
+		int carSize = 160;
 		int carSpeed;
 
 		public Car(int carX, int carY, int carSpeed) {
@@ -164,21 +164,17 @@ public class FroggerWithImages extends PApplet {
 		}
 
 
-//		boolean intersects(Car car) {
-//			if ((frogY > car.getY() && frogY < car.getY()+50) &&
-//					(frogX > car.getX() && frogX < car.getX()+car.getSize())) {
-//				return true;
-//			}
-//			else  {
-//				return false;
-//			}
-//
-//		}
+		boolean intersects(Car car) {
+			if ((frogY > car.getY() && frogY < car.getY()+size) &&
+					(frogX > car.getX() && frogX < car.getX()+car.getSize())) {
+				return true;
+			}
+			else  {
+				return false;
+			}
+
+		}
 
 	}
 
 }
-
-
-
-//STILL NEED TO FIX COLLISION!
